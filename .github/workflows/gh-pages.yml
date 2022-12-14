@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Display latexmk
-        run: cat ~.latexmkrc
+        run: cat ~/.latexmkrc
       - name: Build PDF file
         run: latexmk platex main.tex &&  && latexmk -c && mkdir -p docs && cp *.pdf ./docs/
       - name: Deploy pages
